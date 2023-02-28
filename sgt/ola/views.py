@@ -4,8 +4,8 @@ from django.http import HttpResponse
 
 
 def index(resquest):
-    return HttpResponse('Olá, Mundo!')
+    return render(resquest, 'index.html')
 
 def saudacoes(resquets, name):
-    return HttpResponse(f"<h1 style='color:rgb(150, 80, 219)'>Olá {name}</h1>")
+    return HttpResponse(f"<h1 style='color:rgb(150, 80, 219)'>Olá {name}</h1>"  %name)
 # Create your views here.
