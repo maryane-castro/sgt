@@ -7,9 +7,11 @@ def index(resquest):
     return render(resquest, 'index.html')
 
 
-def greet(resquest):
-    return render(resquest, 'greet.html')
 
-def saudacoes(resquets, name):
-    return HttpResponse(f"<h1 style='color:rgb(150, 80, 219)'>Olá {name}</h1>"  %name)
-# Create your views here.
+def greet(resquest, name):
+    return render(resquest, 'greet.html', {'name':name})
+
+
+"""def saudacoes(resquets, nome):
+    return HttpResponse(f"<h1 style='color:rgb(150, 80, 219)'>Olá {nome}</h1>"  %nome)
+# Create your views here."""
