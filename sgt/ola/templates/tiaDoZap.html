@@ -8,7 +8,12 @@
 </head>
 <body>
     
+    {% if dia %}
+        <p>Bom dia, {{name}}</p>
+    {% else %}
+        <p>Boa noite, {{name}}</p>
+    {% endif %}
 
-    
+
 </body>
 </html>
