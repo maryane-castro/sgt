@@ -16,12 +16,12 @@ def tiaZap(resquest, name):
     aux = datetime.datetime.now()
     dia = int(aux.strftime('%H'))
     booleano = bool
-    if dia > 17:
+    if dia < 17:
         booleano = False
     else:
         booleano = True
     
-    return render(resquest, 'tiaDoZap.html', {'name':name, 'dia': dia})
+    return render(resquest, 'tiaDoZap.html', {'name':name, 'dia': booleano})
 
 """def saudacoes(resquets, nome):
     return HttpResponse(f"<h1 style='color:rgb(150, 80, 219)'>Olá {nome}</h1>"  %nome)
